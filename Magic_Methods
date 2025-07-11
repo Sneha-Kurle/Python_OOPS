@@ -1,0 +1,27 @@
+#Magic_methods- Are __init__, __str__, __gt__,__eq__,__lt__, __contains__, 
+#Used to chnage the capability or custumize the behaviour of the instance methods
+#They are auto matically called by the many python built in operations.
+class books:
+    def __init__(self, book, author,page_num):
+        self.book=book
+        self.author=author
+        self.page_num=page_num
+    def __str__(self):
+        return f"'{self.book}' by {self.author}"
+    def __eq__(self, value):
+        return f'{self.book}={value.book}'
+    def __lt__(self,value):
+        return f'The page number of frst book {self.page_num} is < than page num of second book{value.page_num}' 
+    def __gt__(self,value):
+        return f'The page number of frst book {self.page_num} is > than page num of second book{value.page_num}'
+    def __contains__(self,key):
+        return f'{key} in {self.book}'
+       
+book1=books('Richdad_poordad','Rabert',209)
+book2=books('Power of subconcius mind','Joeseph Murphy',300)
+book3=books('Atomic habits','James',249)
+#print(book2)
+#print(book1==book2)
+#print(book1<book2)
+#print(book1>book2)   
+print('sbeha'in book1)     
