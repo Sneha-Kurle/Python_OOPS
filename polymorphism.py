@@ -13,6 +13,8 @@ class shape(ABC): #abstract class
 class circle(shape):
     def __init__(self, radius):
         self.radius= radius
+    def area(self):
+        return 2*3.142*self.radius**2
  
 class pizza(circle):
     def __init__(self,radius):
